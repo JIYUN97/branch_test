@@ -105,7 +105,7 @@ exports.getComment = async (req, res) => {
 //코멘트(상품후기) 삭제하기
 exports.deleteComment = async (req, res) => {
   //코멘트 id
-  const { id } = req.body
+  const { postid } = req.body
   //상품 id
   const { goodsId } = req.params
   try {
