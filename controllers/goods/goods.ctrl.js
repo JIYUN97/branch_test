@@ -121,6 +121,7 @@ exports.deleteComment = async (req, res) => {
     return res.send({ result: "success" })
   } catch (err) {
     console.log(err)
-    return res.status(400).send({ err: err.message })
+    // 저는 보통 이것을 쓴답니다 ㅎㅎ
+    next(err)
   }
 }
